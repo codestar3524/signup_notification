@@ -1,0 +1,72 @@
+/* assets/css/notifi-plates.css */
+.notifi-plates {
+    position: fixed;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 350px;
+}
+
+.notifi-plate {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: 65px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 0;
+    opacity: 0;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    color: #7E889F;
+    line-height: 20px;
+    font-weight: 400;
+    transition: opacity 300ms ease-in-out 300ms, top 600ms ease-in-out;
+}
+
+.notifi-plate strong {
+    color: #394050;
+    font-weight: 600;
+}
+
+.notifi-plate.active {
+    z-index: 999;
+    opacity: 1;
+    top: 0;
+    transition: opacity 300ms ease-in-out 300ms, top 600ms ease-in-out;
+}
+
+.notifi-plate .plate-icon {
+    flex-shrink: 0;
+}
+
+.notifi-plate .plate-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.plate-info {
+    flex-grow: 1;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 400px) {
+    .notifi-plates {
+        width: calc(100% - 30px);
+        /* Full width minus margins */
+        max-width: 300px;
+        /* Maximum width for very small screens */
+    }
+}
