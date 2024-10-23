@@ -1,1 +1,1 @@
-"# signup_notification" 
+the plugin is for signup card notificaion
